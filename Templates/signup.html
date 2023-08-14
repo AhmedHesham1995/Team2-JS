@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+
+
+    <title>Sign Up</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+            align-items: center;
+            background-image: url('../resources/img/bg2.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 420px;
+            height: 500px;
+            /* background-color: #ce6c566a !important; */
+            background-color: transparent !important;
+            border-radius: 20px;
+            padding: 30px 40px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 60px 80px rgba(0, 0, 0, 0.60), 0 45px 26px rgba(0, 0, 0, 0.14);
+            backdrop-filter: blur(10px);
+        }
+
+        .wrapper h1 {
+            font-size: 20px;
+            text-align: center;
+            color: #f8dbd4;
+        }
+
+        .wrapper .input-box {
+            position: center;
+            width: 100%;
+            height: 40px;
+            /* marginbo: 30px ; */
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            /* Adjust this value to reduce the height */
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            /* padding: 20px 45px 20px 20px; */
+            transition: 0.4s;
+            width: 88%; /*edd*/
+            padding: 0 25px; /*edd*/
+        }
+
+        .input-box input::placeholder {
+            color: #fed6b4;
+        }
+
+        .input-box input:focus {
+            outline: none;
+            transform: scale(1.08);
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            /* Adjust this value to vertically center the icon */
+            transform: translateY(-50%);
+            /* Vertically center the icon */
+            font-size: 20px;
+        }
+
+        .sign-bg {
+            background-image: url('../resources/img/bg2.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .wrapper .btnn {
+            width: 100%;
+            height: 40px;
+            background-color: #2e2f57cb;
+            background-color: rgba(255, 0, 0, .5); /*edd*/
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .wrapper .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link p a , p, i/*edd*/{
+            color: #fff9f3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body class="sign-bg">
+    <div class="wrapper bg-light">
+        <h1>Sign Up</h1>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="Username"
+                oninput="validate(username_sign, user_regx, 'msg1');">
+            <p class="msg1" style="display: none;color:red">at least 6 characters and numbers</p>
+            <i class="fa-solid fa-user" style="color: #f8dbd4;"></i>
+        </div>
+
+        <div class="input-box">
+            <input type="text" id="email" placeholder="Email" oninput="validate(email_l, email_regx, 'msg2');">
+            <p class="msg2" style="display: none; color: red;">invalid e-mail</p>
+            <i class="fa-solid fa-envelope" style="color: #f8dbd4;"></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password"
+                oninput="validate(password_l, pass_regx, 'msg3');">
+            <p class="msg3" style="display: none; color: red;">at least 6 characters or numbers or symbols</p>
+            <i class="fa-solid fa-lock" style="color: #f8dbd4;"></i>
+        </div>
+
+        <div class="requiredInputs text-center d-none">
+            <h6 style="display: none;">Required inputs</h6>
+        </div>
+        <button class="btnn" id="signup" onclick="signUp()" style="margin-top: 30px;">Sign Up</button>
+        <div class="register-link">
+            <p>You have an account? <a href="./login.html">Login</a></p>
+        </div>
+    </div>
+    <script src="../Statics/javaScript/script.js">
+        
+    </script>
+
+</body>
