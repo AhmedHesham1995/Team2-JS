@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+li,a,i,button{
+    display: inline;
+    font-family: 'Rubik';
+    font-size:19px;
+    color:black;
+    text-decoration:none;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: #2c2c2c;
+}
+header li, header a, header i, header button {
+    color: aliceblue;
+}
+header ul li:last-child a{
+    color: red;
+}
+.logo{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button{
+    margin-right: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px 20px;
+    background-color: #edf0f1;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+}
+
+footer{
+    background-color:#2c2c2c;
+    padding: 60px;
+    width: 100%;
+    
+}
+.container{
+    max-width: 1200px;
+    margin:center;
+
+}
+ul{
+    list-style: none;
+    display: inline-block;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+.footerCol{
+    width: 25%;
+    padding: 0 30px;
+    display:inline;
+}
+.footerCol h4{
+    font-size: 18px;
+    color: rgb(35, 150, 116);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+    
+}
+.footerCol h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(227, 85, 229);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+    
+}
+.footerCol ul li a{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: 'Rubik';
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration:none;
+    font-weight: 699;
+    display: block;
+    transition: all 0.3s ease;
+    display:inline;
+}
+.footerCol ul li a:hover{
+    color:rgb(113, 198, 198);
+    padding-left: 10px;
+} 
+.footerCol i{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #507797;
+    transition: all 0.5s ease;
+}
+
+
