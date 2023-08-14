@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        
+        <link rel="stylesheet" href="../Statics/css-stylesheet/exCss_1.1.css">
+        <link rel="stylesheet" href="../Statics/css-stylesheet/style.css">
+        <link rel="stylesheet" href="../Statics/css-stylesheet/contact.css" type="text/css">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Syriac+Eastern:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+         <header>
+            <a href="./index.html"><img class="logo" src="../resources/img/logo.png" width="60px" alt="logo"></a>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="./index.html">Home &nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="">Accessoires &nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="">Service &nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="./contact.html">Contact us &nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="./game.html">Play&Earn</a></li>
+                </ul>
+            </nav>
+            <input type="text" placeholder="Search.." style="padding: 5px; border-radius: 20px;">
+            <i class="fa-solid fa-user fa-sm"></i>
+            <i class="fa-solid fa-cart-shopping fa-sm"></i>
+    
+        </header>
+        <hr>
+        <section>
+            <div class="main">
+                <div class="head">
+                    <h1>Contact us</h1>
+                </div>
+                <div class="container">
+                    <form  class="contact-form" name="contact_us" >
+                        <div class="row">
+                            <div class="first_name">
+                                <label class="form-control-label" for="fname">First Name </label>
+                                <input type="input" id="fname" name="fname" required placeholder="First Name" onfocus="fnameFocus()" onblur="fnameblur()">  
+                            </div>
+                                
+                            <div class="last_name">
+                                <label class="form-control-label" for="lname">Last Name</label>
+                                <input type="input" id="lname" name="lname" required placeholder="Last Name" onfocus="lnameFocus()" onblur="lnameblur()">
+                                
+                            </div>
+                        </div>
+                            <div class="mail">
+                                <label class="form-control-label" for="email">Email</label>
+                                <input type="email"  id="email" name="email" required placeholder="example@example.etc" onfocus="emailFocus()" onblur="emailblur()">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="topic">
+                                <label class="form-control-label" for="contactTopic">  Your Topic</label>
+                                <select  id="contactTopic" name="contactTopic" >
+                                    <option>Select</option>
+                                    
+                                    <option id="OrderStatus" value="Order Status">Order Status</option>
+                                    
+                                    <option id="IssueWithMyOrder" value="Issue With My Order">Issue With My Order</option>
+                                    
+                                    <option id="TechnicalSupport" value="Technical Support">Technical Support</option>
+                                    
+                                    <option id="InternationalShipping" value="International Shipping">International Shipping</option>
+                                    
+                                    <option id="WholeSaleQuestion" value="Whole Sale Question">Whole Sale Question</option>
+                                    
+                                    <option id="ReturnOrder" value="Return Order">Return Order</option>
+                                    
+                                    <option id="Other" value="Other">Other</option>
+                                    
+                                </select>
+                                
+                            </div>
+                        
+                        <div class="form-group">
+                            <label class="form-control-label"> Your Comment</label>
+                            <textarea  id="contact-form-comment" rows="5" name="contact-form-comment"  maxlength="2147483647"></textarea>
+                        </div>
+                        
+                        <div>
+                            <div class="submit">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <footer class="footer" >
+            <div class="container">
+                <div class="row"></div>
+                    <div class="footerCol">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="">about us &nbsp; </a></li>
+                        <li><a href="">our services &nbsp;</a></li>
+                        <li><a href="">privacy policy &nbsp;</a></li>
+                    </ul>
+                    </div><br>
+                    <div class="footerCol">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="">FAQ &nbsp;</a></li>
+                            <li><a href="">shipping &nbsp;</a></li>
+                            <li><a href="">returns &nbsp;</a></li>
+                            <li><a href="">order status &nbsp;</a></li>
+                            <li><a href="">payment options &nbsp;</a></li>
+                        </ul>
+                    </div><br>
+                    <div class="footerCol">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="">shoes &nbsp;</a></li>
+                            <li><a href="">clothes &nbsp;</a></li>
+                            <li><a href="">accessories &nbsp;</a></li>
+                        </ul>
+                    </div><br>
+                    <div class="footerCol">
+                        <h4>follow us</h4>
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                        </ul>
+                    </div><br>
+            </div>
+        </footer>
+
+
+
+        <script>
+            var fname = document.getElementById("fname");
+            var fnamepattern=/^([a-zA-Z]{3,})/;
+                function fnameFocus()
+                {
+                 fname.style.outline ='2px solid #9999FF';
+                }
+
+                function fnameblur(){
+                fname.style.border="0.5px solid gray";
+                var fnamevalue=fname.value;
+                if(fnamepattern.test(fnamevalue))
+                  {
+                    fname.style.outline ='none';
+                    fname.style.background="white";
+                  }
+                else{
+                      
+                    
+                      fname.style.border="1px solid red";
+                      fname.focus()
+                      fname.select();
+                      fnameFocus();
+                    }
+                }
+
+            var lname = document.getElementById("lname");
+            var lnamepattern=/^([a-zA-Z]{3,})/;
+                function lnameFocus()
+                {
+                 lname.style.outline ='2px solid #9999FF';
+                }
+                
+                function lnameblur(){
+                lname.style.border="0.5px solid gray";
+                var lnamevalue=lname.value;
+                if(lnamepattern.test(lnamevalue))
+                  {
+                    lname.style.outline ='none';
+                    lname.style.background="white";
+                  }
+                else {
+                      lname.style.border="1px solid red";
+                      lname.focus()
+                      lname.select();
+                      lnameFocus();
+                    }
+                }
+                var email = document.getElementById("email");
+               var emailpatten=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+                function emailFocus()
+                {
+                 email.style.outline ='2px solid #9999FF';
+                }
+                
+                function emailblur(){
+                email.style.border="0.5px solid gray";
+                var emailvalue=email.value;
+                if(emailpatten.test(emailvalue))
+                  {
+                    email.style.outline ='none';
+                    email.style.background="white";
+                  }
+                else {
+                      email.style.border="1px solid red";
+                      email.focus()
+                      email.select();
+                      emailFocus();
+                    }
+                }
+                
+
+                
+
+
+        </script>
+        <script src="https://kit.fontawesome.com/a14d2cacd1.js" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+
