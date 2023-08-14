@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Category</title>
+    <link rel="stylesheet" href="../Statics/css-stylesheet/exCss_1.1.css">
+    <link rel="stylesheet" href="../Statics/css-stylesheet/style.css">
+    <script src="../Statics/javaScript/addProducts.js"></script>
+    <style>
+        body div.main {
+            text-align: center;
+            height: fit-content;
+            min-height: 0;
+        }
+        .catButton button, .catButton a, .catButton{
+            display: inline;
+        }
+    </style>
+</head>
+
+<body onload="chooseWhatToShow()">
+    <header>
+        <a href="./index.html"><img class="logo" src="../resources/img/logo.png" width="60px" alt="logo"></a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="./index.html">Home &nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="">Accessoires &nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="">Service &nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="./contact.html">Contact us &nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="./game.html">Play&Earn</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search.." style="padding: 5px; border-radius: 20px;">
+        <i class="fa-solid fa-user fa-sm"></i>
+        <i class="fa-solid fa-cart-shopping fa-sm"></i>
+
+    </header>
+
+    <div class="main">
+        <div class="catButton">
+            <a href="./category.html?q=mens-shirts"><button>Men T-shirts</button></a>
+            <a href="./category.html?q=womens-dresses"><button>Women Dresses</button></a>
+            <a href="./category.html?q=mens-shoes"><button>Men Shoes</button></a>
+            <a href="./category.html?q=womens-shoes"><button>Women Shoes</button></a>
+        </div>
+    </div>
+    <script>
+        let arr = document.querySelectorAll("div.main div.catButton button")
+        let index = categories.indexOf(pageIndecator)
+        console.log(arr);
+        arr[index].style.backgroundColor = "black"
+        arr[index].style.color = "whitesmoke"
+    </script>
+
+    
+    <div class="products">
+        <div id="products"></div>
+
+        <script src="addProducts.js"></script>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/a14d2cacd1.js" crossorigin="anonymous"></script>
+    <script src="external.js"></script>
+
+
+    <footer class="footer" >
+        <div class="container">
+            <div class="row"></div>
+                <div class="footerCol">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="">about us &nbsp; </a></li>
+                    <li><a href="">our services &nbsp;</a></li>
+                    <li><a href="">privacy policy &nbsp;</a></li>
+                </ul>
+                </div><br>
+                <div class="footerCol">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="">FAQ &nbsp;</a></li>
+                        <li><a href="">shipping &nbsp;</a></li>
+                        <li><a href="">returns &nbsp;</a></li>
+                        <li><a href="">order status &nbsp;</a></li>
+                        <li><a href="">payment options &nbsp;</a></li>
+                    </ul>
+                </div><br>
+                <div class="footerCol">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="">shoes &nbsp;</a></li>
+                        <li><a href="">clothes &nbsp;</a></li>
+                        <li><a href="">accessories &nbsp;</a></li>
+                    </ul>
+                </div><br>
+                <div class="footerCol">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                    </ul>
+                </div><br>
+        </div>
+    </footer>
+    
+    
+    <script src="https://kit.fontawesome.com/a14d2cacd1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
